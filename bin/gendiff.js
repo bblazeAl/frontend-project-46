@@ -6,6 +6,8 @@ const program = new Command();
 
 program
   .description('Compares two configuration files and shows a difference.')
-  .version('-v, --version', 'output the version number');
+  .arguments('<filepath1> <filepath2>')
+  .option('-v, --version', 'output the version number')
+  .option('-f, --format <type>', 'output format');
 
 program.parse();
