@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/bblazeAl/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/bblazeAl/frontend-project-46/actions)",
-  "main": "index.js",
+  "main": "gendiff.js",
   "type": "module",
   "bin": {
     "gendiff": "bin/gendiff.js"
@@ -13,7 +13,9 @@
   "author": "Alena Lobacheva",
   "license": "ISC",
   "dependencies": {
-    "commander": "^12.1.0"
+    "commander": "^12.1.0",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@eslint/create-config": "^1.0.0",
