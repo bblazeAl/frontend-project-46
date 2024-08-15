@@ -7,19 +7,30 @@ import genDiff from '../src/index.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
+const getFixturePath = (filename) =>
+  path.join(__dirname, '..', '__fixtures__', filename);
 const readFile = (filename) => readFileSync(getFixturePath(filename), 'utf-8');
 
-test('genDiff with JSON files', () => {
-  const expected = readFile('expected.txt');
+test('genDiff Tree', () => {
   const file1 = getFixturePath('file1.json');
   const file2 = getFixturePath('file2.json');
-  expect(genDiff(file1, file2)).toBe(expected);
+  const expected = readFile('expectedTree.txt');
+
+  expect(genDiff(file1, file2)).toEqual(expected);
 });
 
-test('genDiff with YAML files', () => {
-  const expected = readFile('expected.txt');
-  const file1 = getFixturePath('file1.yaml');
-  const file2 = getFixturePath('file2.yaml');
-  expect(genDiff(file1, file2)).toBe(expected);
+test('gendiff Plain', () => {
+  const file1 = getFixturePath('file1.json');
+  const file2 = getFixturePath('file2.json');
+  const expected = readFile('expectedPlain.txt');
+
+  expect(genDiff(file1, file2, 'plain')).toEqual(expected);
+});
+
+test('JSON gendiff', () => {
+  const file1 = getFixturePath('file1.json');
+  const file2 = getFixturePath('file2.json');
+  const expected = readFile('expectedJSON.txt');
+
+  expect(genDiff(file1, file2, 'json')).toEqual(expected);
 });
