@@ -7,3 +7,21 @@
 
 
 <a href="https://codeclimate.com/github/bblazeAl/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/f5cc709624b983ee5319/maintainability" /></a>
+
+# **Description**
+This is a simple tool you can run in your terminal to compare two files in **YAML** or **JSON** formats. It checks both files and shows what is different between them. Outputs the comparison results in three formats: "stylish" (default), "plain", and "json".
+
+# **Setup**
+```make install```
+
+## Available Commands
+
+- `-h`  
+  Displays help information and general usage details.
+
+- `-v`  
+  Shows the current version of the program.
+
+- `-f [format]`  
+  Selects the preferred output format. Supported formats: `stylish`, `plain`, `json`.
+
