@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/bblazeAl/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/bblazeAl/frontend-project-46/actions)",
+  "description": "Compares two files and shows gifference between them in tree formats - stylish(as default), plain and JSON",
   "main": "src/index.js",
   "type": "module",
   "bin": {
